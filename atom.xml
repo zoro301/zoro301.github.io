@@ -4,7 +4,7 @@
   <title><![CDATA[Ren Qiang 扯淡专用]]></title>
   <link href="http://zoro301.github.io/atom.xml" rel="self"/>
   <link href="http://zoro301.github.io/"/>
-  <updated>2016-07-28T17:11:22+08:00</updated>
+  <updated>2016-07-28T21:16:21+08:00</updated>
   <id>http://zoro301.github.io/</id>
   <author>
     <name><![CDATA[Ren Qiang]]></name>
@@ -12,5 +12,14 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[写在前面]]></title>
+    <link href="http://zoro301.github.io/blog/2016/07/28/xie-zai-qian-mian/"/>
+    <updated>2016-07-28T21:12:09+08:00</updated>
+    <id>http://zoro301.github.io/blog/2016/07/28/xie-zai-qian-mian</id>
+    <content type="html"><![CDATA[<p>N久之前就说要搭博客，一直也没行动。最近发现偶尔写点东西还挺利于提高老年人记忆力的，以后会不定期更新技术博客&amp;扯淡。</p>
+]]></content>
+  </entry>
   
 </feed>
