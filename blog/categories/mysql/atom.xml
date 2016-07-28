@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Mysql | Ren Qiang 扯淡专用]]></title>
+  <link href="http://zoro301.github.io/blog/categories/mysql/atom.xml" rel="self"/>
+  <link href="http://zoro301.github.io/"/>
+  <updated>2016-07-28T22:55:35+08:00</updated>
+  <id>http://zoro301.github.io/</id>
+  <author>
+    <name><![CDATA[Ren Qiang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mysql 创建索引存储过程]]></title>
+    <link href="http://zoro301.github.io/blog/2016/07/28/mysql-chuang-jian-suo-yin-de-cun-chu-guo-cheng/"/>
+    <updated>2016-07-28T21:54:27+08:00</updated>
+    <id>http://zoro301.github.io/blog/2016/07/28/mysql-chuang-jian-suo-yin-de-cun-chu-guo-cheng</id>
+    <content type="html"><![CDATA[<p>在开发过程中，经常会使用到索引。为方便创建索引，写了一个存储过程，在这里分享一下。</p>
+
+<pre><code class="mysql">USE yourdatabase;
+
+DELIMITER $$
+
+DROP PROCEDURE IF EXISTS `create_index_if_not_exists`$$
+
+CREATE DEFINER=`datacenter`@`%` PROCEDURE `create_index_if_not_exists`(IN in_table_name VARCHAR(255), IN in_index_name VARCHAR(50), IN in_index_type VARCHAR(10),IN in_filed_list VARCHAR(255))
+BEGIN
+    SET@index_cnt = (
+            SELECT COUNT(1)cnt FROM INFORMATION_SCHEMA.STATISTICS
+            WHERE table_name=in_table_name AND index_name=in_index_name
+    );
+
+    IF IFNULL(@index_cnt, 0)=0 THEN SET@execute_sql=CONCAT('Alter table ', in_table_name, ' ADD ', in_index_type, ' ',in_index_name, '(',in_filed_list,');');
+    PREPARE stmt FROM @execute_sql;
+    EXECUTE stmt;
+    DEALLOCATE PREPARE stmt;
+    END IF;
+END$$
+
+DELIMITER ;
+</code></pre>
+
+<p>调用存储过程，call create_index_if_not_exists(table_name,index_name,index_type,filed_list);</p>
+
+<p>参数含义如下：</p>
+
+<ol>
+<li>table_name:表名。</li>
+<li>index_name:索引名。</li>
+<li>index_type:INDEX,UNIQUE等索引类型关键字。</li>
+<li>filed_list:需要添加索引的字段。</li>
+</ol>
+
+
+<p>例：</p>
+
+<p>call create_index_if_not_exists(&lsquo;role&rsquo;,&lsquo;roleId&rsquo;,&lsquo;UNIQUE&rsquo;,&lsquo;roleId&rsquo;);</p>
+
+<p>call create_index_if_not_exists(&lsquo;user&rsquo;,&lsquo;userId&rsquo;,&lsquo;INDEX&rsquo;,&lsquo;userId&rsquo;);</p>
+
+<p>call create_index_if_not_exists(&lsquo;roleuserrelation&rsquo;,&lsquo;role_user&rsquo;,&lsquo;INDEX&rsquo;,&lsquo;roleId,userId&rsquo;);</p>
+]]></content>
+  </entry>
+  
+</feed>
