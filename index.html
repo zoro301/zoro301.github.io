@@ -9,28 +9,7 @@
   <meta name="author" content="Ren Qiang">
 
   
-  <meta name="description" content="在开发过程中，经常会使用到索引。为方便创建索引，写了一个存储过程，在这里分享一下。 1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-USE yourdatabase; DELIMITER $$ DROP PROCEDURE IF &hellip;">
+  <meta name="description" content="查询12306列车时刻 命令执行格式 python query_tickets.py [-gdzkt] from_station to_station date -g 高铁 -d 动车 -z 直达 -k 普快 -t 特快 from_station 和 to_station目前只支持拼音, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +68,53 @@ USE yourdatabase; DELIMITER $$ DROP PROCEDURE IF &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2016/09/04/pythoncha-xun-12306lie-che-shi-ke/">Python查询12306列车时刻</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-09-04T19:32:07+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>4</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>7:32 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h1>查询12306列车时刻</h1>
+
+<p>命令执行格式 python query_tickets.py [-gdzkt] from_station to_station date
+    -g 高铁
+    -d 动车
+    -z 直达
+    -k 普快
+    -t 特快</p>
+
+<p>from_station 和 to_station目前只支持拼音,后续研究下支持中文查询</p>
+
+<p>date: 日期格式，yyyy-MM-dd</p>
+
+<p>关于车站名称的解析，通过开发者工具可以看到下边这个文件，车站名对应的Code都在这个文件里，可以写个脚步将其解析成set,方便后续使用,stations_code.py是解析后的结果<br/>
+&ldquo;src=&rdquo;/otn/resources/js/framework/station_name.js?station_version=1.8964" "</p>
+
+<p>代码地址：<a href="https://github.com/zoro301/query_train_tickets">https://github.com/zoro301/query_train_tickets</a><br/>
+执行效果：
+<img src="file:///Users/renqiang/Downloads/result.png" alt="image" /></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -224,6 +250,10 @@ USE yourdatabase; DELIMITER $$ DROP PROCEDURE IF &hellip;">
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/09/04/pythoncha-xun-12306lie-che-shi-ke/">Python查询12306列车时刻</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2016/07/28/mysql-chuang-jian-suo-yin-de-cun-chu-guo-cheng/">Mysql 创建索引存储过程</a>

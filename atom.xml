@@ -4,7 +4,7 @@
   <title><![CDATA[Ren Qiang 扯淡专用]]></title>
   <link href="http://zoro301.github.io/atom.xml" rel="self"/>
   <link href="http://zoro301.github.io/"/>
-  <updated>2016-08-02T10:01:56+08:00</updated>
+  <updated>2016-09-04T20:02:05+08:00</updated>
   <id>http://zoro301.github.io/</id>
   <author>
     <name><![CDATA[Ren Qiang]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Python查询12306列车时刻]]></title>
+    <link href="http://zoro301.github.io/blog/2016/09/04/pythoncha-xun-12306lie-che-shi-ke/"/>
+    <updated>2016-09-04T19:32:07+08:00</updated>
+    <id>http://zoro301.github.io/blog/2016/09/04/pythoncha-xun-12306lie-che-shi-ke</id>
+    <content type="html"><![CDATA[<h1>查询12306列车时刻</h1>
+
+<p>命令执行格式 python query_tickets.py [-gdzkt] from_station to_station date
+    -g 高铁
+    -d 动车
+    -z 直达
+    -k 普快
+    -t 特快</p>
+
+<p>from_station 和 to_station目前只支持拼音,后续研究下支持中文查询</p>
+
+<p>date: 日期格式，yyyy-MM-dd</p>
+
+<p>关于车站名称的解析，通过开发者工具可以看到下边这个文件，车站名对应的Code都在这个文件里，可以写个脚步将其解析成set,方便后续使用,stations_code.py是解析后的结果<br/>
+&ldquo;src=&rdquo;/otn/resources/js/framework/station_name.js?station_version=1.8964" "</p>
+
+<p>代码地址：<a href="https://github.com/zoro301/query_train_tickets">https://github.com/zoro301/query_train_tickets</a><br/>
+执行效果：
+<img src="file:///Users/renqiang/Downloads/result.png" alt="image" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mysql 创建索引存储过程]]></title>
