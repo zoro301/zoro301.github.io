@@ -25,4 +25,5 @@ date: 日期格式，yyyy-MM-dd
 
 代码地址：https://github.com/zoro301/query_train_tickets  
 执行效果： 
-![查询结果](/Users/renqiang/Downloads/result.png)
+
+![查询结果](https://github.com/zoro301/query_train_tickets/blob/master/result.png)
