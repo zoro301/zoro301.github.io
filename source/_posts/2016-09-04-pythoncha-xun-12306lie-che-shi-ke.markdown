@@ -6,7 +6,7 @@ comments: true
 categories: 
 ---
 
-# 查询12306列车时刻
+### 查询12306列车时刻
 
 命令执行格式 python query_tickets.py [-gdzkt] from_station to_station date
 [option]: 
@@ -25,4 +25,4 @@ date: 日期格式，yyyy-MM-dd
 
 代码地址：https://github.com/zoro301/query_train_tickets  
 执行效果：
-![image](file:///Users/renqiang/Downloads/result.png)
+![](file:///Users/renqiang/Downloads/result.png)
