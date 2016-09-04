@@ -24,5 +24,5 @@ date: 日期格式，yyyy-MM-dd
 "src="/otn/resources/js/framework/station_name.js?station_version=1.8964" "
 
 代码地址：https://github.com/zoro301/query_train_tickets  
-执行效果：
-![](file:///Users/renqiang/Downloads/result.png)
+执行效果： 
+![查询结果](file:///Users/renqiang/Downloads/result.png)
