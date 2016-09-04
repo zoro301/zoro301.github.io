@@ -4,7 +4,7 @@
   <title><![CDATA[Ren Qiang 扯淡专用]]></title>
   <link href="http://zoro301.github.io/atom.xml" rel="self"/>
   <link href="http://zoro301.github.io/"/>
-  <updated>2016-09-04T20:25:19+08:00</updated>
+  <updated>2016-09-04T20:34:55+08:00</updated>
   <id>http://zoro301.github.io/</id>
   <author>
     <name><![CDATA[Ren Qiang]]></name>
@@ -35,8 +35,9 @@
 &ldquo;src=&rdquo;/otn/resources/js/framework/station_name.js?station_version=1.8964" "</p>
 
 <p>代码地址：<a href="https://github.com/zoro301/query_train_tickets">https://github.com/zoro301/query_train_tickets</a><br/>
-执行效果：
-<img src="http://zoro301.github.io/Users/renqiang/Downloads/result.png" alt="查询结果" /></p>
+执行效果：</p>
+
+<p><img src="https://github.com/zoro301/query_train_tickets/blob/master/result.png" alt="查询结果" /></p>
 ]]></content>
   </entry>
   
